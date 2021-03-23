@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+<style>
+body,h1,h2{font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+p {line-height: 2}
+.bgimg, .bgimg2 {
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.bgimg {background-image: url("/w3images/wedding_couple.jpg");}
+.bgimg2 {background-image: url("/w3images/flowers.jpg")}
+
+.w3-display-middle
+{   
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.w3-text-grey 
+{
+    text-align: center!important;
+}
+
+.w3-pale-red {
+    color: white!important;
+    background-color: orange!important;
+}
+
+.w3-black 
+{
+    color: white!important;
+    background-color: orange!important;
+}
+
+.w3-grayscale-min
+{
+    filter: none
+}
+
+.limit-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.Powered{
+    background-color: black;
+    color: white;
+}
+
+.photo {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  text-align: center;
+  max-width: 1100px;
+  margin: auto;
+  grid-row-gap: 50px;
+  padding-bottom: 50px;
+}
+
+.food {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  text-align: center;
+  margin: auto;
+  grid-row-gap: 60px;
+  padding-bottom: 10px;
+}
+
+
+
+ 
+
+
+
+</style>
+<body>
+
+<!-- Header / Home-->
+<header class="w3-display-container w3-wide bgimg w3-grayscale-min" id="home">
+  <div class="w3-display-middle w3-text-white w3-center">
+    <h1 class="w3-jumbo">F-Camp</h1>
+    <h2><b>01.05.2021</b></h2>
+    <p class="w3-center"><a href="#Joinnow" class="w3-button w3-black w3-round w3-padding-large w3-large">Register</a></p>
+  </div>
+
+  <div class="carousel-item active">
+    <img src="C:\Users\ninom\Desktop\Web2\Assignment 2\1.jpg">
+    <div class="carousel-caption">
+    </div>   
+  </div>
+</header>
+
+<!-- Navbar (sticky bottom) -->
+<div class="w3-bottom w3-hide-small">
+  <div class="w3-bar w3-white w3-center w3-padding w3-opacity-min w3-hover-opacity-off">
+    <a href="#home" style="width:25%" class="w3-bar-item w3-button">Home</a>
+    <a href="#us" style="width:25%" class="w3-bar-item w3-button">Timeline</a>
+    <a href="#Photos" style="width:25%" class="w3-bar-item w3-button">Photos</a>
+    <a href="#Joinnow" style="width:25%" class="w3-bar-item w3-button w3-hover-black">Join Now</a>
+  </div>
+</div>
+
+<!-- Timeline -->
+<div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min" id="us">
+  <div class="limit-content">
+    <h1 class="w3-center"><b>Timeline</b></h1>
+    <img src="C:\Users\ninom\Desktop\Web2\Assignment 2\Timeline.png" style="width:100%;margin:32px 0">
+  </div>
+</div>
+
+<!--Countdown-->
+     
+
+<!-- Display the countdown timer in an element -->
+<DIV>
+<h1 class="w3-center" style="margin-top:6rem;font-size: 30px;"><b>Countdown to F-Camp 2021</b></h1>
+<p id="demo" style="text-align: center; font-size: 100px; font-family: 'Bebas Neue', cursive;margin-top: 0.1rem;"  ></p>
+</DIV>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("May 1, 2021 08:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+<!-- Photos --->
+<section>
+	<h1 id="Photos" style="text-align:center;"><br>Photos</h1>
+ 	<div class="grid-container photo">
+	    <div class="grid-item">
+	    	<img img src="C:\Users\ninom\Desktop\Web2\Assignment 2\2.jpg">
+      </div>
+      <div class="grid-item">
+        <img img src="C:\Users\ninom\Desktop\Web2\Assignment 2\3.jpg">
+      </div>
+      <div class="grid-item">
+        <img img src="C:\Users\ninom\Desktop\Web2\Assignment 2\4.jpg">
+      </div>
+      <div class="grid-item">
+        <img img src="C:\Users\ninom\Desktop\Web2\Assignment 2\5.jpg">
+      </div>
+      <div class="grid-item">
+        <img img src="C:\Users\ninom\Desktop\Web2\Assignment 2\6.jpg">
+      </div>
+      <div class="grid-item">
+        <img img src="C:\Users\ninom\Desktop\Web2\Assignment 2\7.jpg">
+      </div>
+    </div>
+</section>
+
+
+
+<!-- DRINK PREFERENCE -->
+<div class="w3-container w3-padding-64 w3-center" id="DRINKPREFERENCE">
+  <div class="w3-content">
+    <h1> <b>DRINK PREFERENCE</b> </h1>
+  </div>
+
+  <div class="grid-container food">
+    <div class="grid-item">
+        <img img src="C:\Users\ninom\Desktop\Web2\Assignment 2\cocacola.png">
+    </div>
+    <div class="grid-item">
+        <img img src="C:\Users\ninom\Desktop\Web2\Assignment 2\pepsi.png">
+    </div>
+     <div class="grid-item">
+         <img img src="C:\Users\ninom\Desktop\Web2\Assignment 2\sprite.png">
+     </div>
+</div>
+
+</div>
+
+<!-- Join now section -->
+<div class="w3-container w3-padding-64 w3-pale-red w3-center w3-wide" id="Joinnow">
+  <h1>HOPE YOU CAN JOIN IT!</h1>
+  <p class="w3-large">Much more than party</p>
+  <p class="w3-xlarge">
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-round w3-red w3-opacity w3-hover-opacity-off" style="padding:8px 60px">Join Now</button>
+  </p>
+</div>
+
+<!-- Join now modal -->
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="padding:32px;max-width:600px">
+    <div class="w3-container w3-white w3-center">
+      <h1 class="w3-wide">CAN YOU COME?</h1>
+      <p>Much more than party !</p>
+      <form>
+        <input class="w3-input w3-border" type="text" placeholder="ID Student" name="idstudent">
+        <input class="w3-input w3-border" type="text" placeholder="Name" name="name">
+      </form>
+      <div class="w3-row">
+        <div class="w3-half">
+          <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-block w3-green">Going</button>
+        </div>
+        <div class="w3-half">
+          <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-block w3-red">Can't come</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-padding-16 Powered">
+  <p>Powered by <a href="https://www.facebook.com/FCampFU/?ref=page_internal" title="W3.CSS" target="_blank" class="w3-hover-text-green">F-Camp FPTU</a></p>
+</footer>
+<div class="w3-hide-small" style="margin-bottom:32px"> </div>
+
+
+
+
+
+
+
+</body>
+</html>
